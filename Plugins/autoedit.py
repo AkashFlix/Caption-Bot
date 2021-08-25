@@ -12,14 +12,33 @@ from config import Config
 # =
 usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
-caption_text = Config.CAPTION_TEXT
+caption_text = """
+〰️〰️〰️〰️〰️〰️〰️〰️〰️
+
+<b>╭─🔅 ᴜᴘʟᴏᴀᴅ ʙʏ 🔅 ─╮</b>
+
+<b>├•</b> <i>@AnimeHubFlix</i>
+
+<b>├•</b> <i>@AniMoviesFlix</i>
+
+<b>╰─────────────╯</b>
+
+〰️〰️〰️〰️〰️〰️〰️〰️〰️
+"""
 
 
 @autocaption.on_message(filters.channel & (filters.document | filters.video | filters.audio ) & ~filters.edited, group=-1)
 async def editing(bot, message):
       try:
          media = message.document or message.video or message.audio
-         caption_text = Config.CAPTION_TEXT
+         caption_text = """
+         〰️〰️〰️〰️〰️〰️〰️〰️〰️
+<b>╭─🔅 ᴜᴘʟᴏᴀᴅ ʙʏ 🔅 ─╮</b>
+<b>├•</b> <i>@AnimeHubFlix</i>
+<b>├•</b> <i>@AniMoviesFlix</i>
+<b>╰─────────────╯</b>
+〰️〰️〰️〰️〰️〰️〰️〰️〰️
+"""
       except:
          caption_text = ""
          pass 
