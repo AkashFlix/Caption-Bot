@@ -31,8 +31,7 @@ caption_text = """
 async def editing(bot, message):
       try:
          media = message.document or message.video or message.audio
-         caption_text = """
-         〰️〰️〰️〰️〰️〰️〰️〰️〰️
+         caption_text = """〰️〰️〰️〰️〰️〰️〰️〰️〰️
 <b>╭─🔅 ᴜᴘʟᴏᴀᴅ ʙʏ 🔅 ─╮</b>
 <b>├•</b> <i>@AnimeHubFlix</i>
 <b>├•</b> <i>@AniMoviesFlix</i>
